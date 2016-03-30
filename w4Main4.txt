@@ -1,0 +1,76 @@
+﻿
+In [1]:
+%pwd
+Out[1]:
+u'C:\\Users\\user\\Documents\\p162-'
+In [2]:
+%cd F:
+F:\
+In [3]:
+%pwd
+Out[3]:
+u'F:\\'
+In [4]:
+%cd p162/
+F:\p162
+In [5]:
+%pwd
+Out[5]:
+u'F:\\p162'
+In [6]:
+mydir=%pwd
+In [7]:
+mydir
+Out[7]:
+u'F:\\p162'
+In [8]:
+import os
+In [9]:
+myplantdir=os.path.join(mydir,'lib')
+In [10]:
+myplantdir
+Out[10]:
+u'F:\\p162\\lib'
+In [11]:
+%cd {myplantdir}
+F:\p162\lib
+In [12]:
+mydot="C:\Program Files\Graphviz2.38\bin\dot.exe"
+In [16]:
+%install_ext https://raw.githubusercontent.com/sberke/ipython-plantuml/master/plantuml_magics.py
+Installed plantuml_magics.py. To use it, type:
+  %load_ext plantuml_magics
+In [17]:
+%load_ext plantuml_magics
+The plantuml_magics extension is already loaded. To reload it, use:
+  %reload_ext plantuml_magics
+In [18]:
+import glob
+%cd {myplantdir}
+glob.glob(r'./*.jar')
+F:\p162\lib
+Out[18]:
+['.\\plantuml.jar']
+In [19]:
+import os
+os.environ['GRAPHVIZ_DOT']=mydot
+print os.environ['GRAPHVIZ_DOT']
+!java -jar {plantdir}/plantuml.jar -testdot
+C:\Program Files\Graphviz2.38in\dot.exe
+Error: Unable to access jarfile {plantdir}/plantuml.jar
+In [20]:
+%%plantuml
+@startuml
+start
+:set how many turns;
+:set how much to grow bigger;
+:set angle;
+:set start size;
+repeat
+if (i is divided by 2) then
+    :grow bigger;
+endif
+:draw;
+repeat while(turns)
+stop
+@enduml
