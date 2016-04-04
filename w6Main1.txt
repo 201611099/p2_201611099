@@ -13,10 +13,10 @@ elseif(18.5<=bmi<23)
 :print "normal weight";
 
 elseif(23<=bmi<=25)
-:print (over weight);
+:print "over weight";
 
 elseif(bmi>25)
-:print (obesity);
+:print "obesity";
 
 endif
 
