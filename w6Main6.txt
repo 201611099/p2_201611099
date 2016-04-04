@@ -1,0 +1,34 @@
+﻿@startuml
+
+start
+:get user input a;
+:get user input b;
+if (a=='scissors')
+    if (b=='scssors')
+    :print "draw";
+    elseif (b=='paper')
+    :print "scissors win";
+    elseif (b=='rock')
+    :print "rock win";
+
+else (a=='paper')
+    if (b=='scissors')
+    :print "scissors win";
+    elseif (b=='paper')
+    :print "draw";
+    elseif (b=='rock')
+    :print "paper win";
+
+elseif(a=='rock')
+    if (b=='scissors')
+    :print "rock win";
+    elseif (b=='paper')
+    :print "paper win";
+    elseif (b=='rock')
+    :print "draw";
+
+endif
+
+stop
+
+@enduml
