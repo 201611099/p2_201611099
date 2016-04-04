@@ -1,0 +1,25 @@
+﻿@startuml
+
+start
+
+:user height input H;
+:user weight input W;
+:bmi = W/(H*H);
+
+if(bmi<18.5)
+:print "under weight";
+
+elseif(18.5<=bmi<23)
+:print "normal weight";
+
+elseif(23<=bmi<=25)
+:print (over weight);
+
+elseif(bmi>25)
+:print (obesity);
+
+endif
+
+stop
+
+@enduml
